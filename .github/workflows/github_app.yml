@@ -26,5 +26,5 @@ jobs:
         run: |
           gh api octocat
           ls
-          git clone https://github.com/spsdevops/DevOps_Master
-          ls
+          git archive --remote=ssh://github.com/spsdevops/DevOps_Master.git HEAD try_to_get_me.md | tar xO
+          cat try_to_get_me.md
