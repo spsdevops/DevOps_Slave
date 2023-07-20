@@ -10,7 +10,7 @@ name: 🐙Workflows Master🐙
 on:
   workflow_dispatch:
 jobs:
-  demo_app_authentication:
+  Try_to_get_file:
     runs-on: ubuntu-latest
     steps:
       - name: Generate a token
