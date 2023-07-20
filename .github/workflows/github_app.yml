@@ -33,4 +33,4 @@ jobs:
           -H "X-GitHub-Api-Version: 2022-11-28" \
           /repos/spsdevops/DevOps_Master/contents/try_to_get_me.md
           echo "doing it with curl"
-          curl -H "Authorization: token ${TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Master/main/try_to_get_me.md
+          curl -H "Authorization: token ${GITHUB_TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Master/main/try_to_get_me.md
