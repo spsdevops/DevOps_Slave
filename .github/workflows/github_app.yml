@@ -1,29 +1,14 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# GitHub recommends pinning actions to a commit SHA.
-# To get a newer version, you will need to update the SHA.
-# You can also reference a tag or branch, but the action may change without warning.
 name: 🐙Workflows Master🐙
 on:
   workflow_dispatch:
 jobs:
   Try_to_get_file:
-    permissions: write-all
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate a token
-        id: generate_token
-        uses: tibdex/github-app-token@b62528385c34dbc9f38e5f4225ac829252d1ea92
-        with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.APP_PRIVATE_KEY }}
-
-      - name: Use the token
-        env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-        run: |
-          gh api octocat
-          curl -H "Authorization: token ${GITHUB_TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Master/main/try_to_get_me.md
+    uses: spsdevops/DevOps_Master/.github/workflows/reusable_get_file.yml@main
+    with:
+      ambiente: "develop"
+      region: us-east-1
+      ref: ${{ github.sha }}
+      dynamodb: ${{github.event.inputs.dynamodb}}
+      region_dr: us-west-2
+    secrets: inherit
+permissions: write-all
