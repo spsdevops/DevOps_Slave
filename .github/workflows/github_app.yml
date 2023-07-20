@@ -31,4 +31,4 @@ jobs:
           gh api \
           -H "Accept: application/vnd.github+json" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
-          /repos/DevOps_Master/contents/try_to_get_me.md
+          /repos/spsdevops/DevOps_Master/contents/try_to_get_me.md
