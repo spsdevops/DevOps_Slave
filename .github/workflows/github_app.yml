@@ -25,6 +25,7 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
           gh api octocat
+          echo "running ls"
           ls
-          git archive --remote=ssh://github.com/spsdevops/DevOps_Master.git HEAD try_to_get_me.md | tar xO
+          curl -H "Authorization: token ${GITHUB_TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Slave/main/try_to_get_me.md
           cat try_to_get_me.md
