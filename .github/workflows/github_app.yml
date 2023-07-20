@@ -25,3 +25,6 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
           gh api octocat
+          ls
+          git clone https://github.com/spsdevops/DevOps_Master
+          ls
