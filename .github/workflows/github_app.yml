@@ -4,11 +4,5 @@ on:
 jobs:
   Try_to_get_file:
     uses: spsdevops/DevOps_Master/.github/workflows/reusable_get_file.yml@main
-    with:
-      ambiente: "develop"
-      region: us-east-1
-      ref: ${{ github.sha }}
-      dynamodb: ${{github.event.inputs.dynamodb}}
-      region_dr: us-west-2
     secrets: inherit
 permissions: write-all
