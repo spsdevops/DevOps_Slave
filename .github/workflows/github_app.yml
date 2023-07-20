@@ -28,4 +28,3 @@ jobs:
           echo "running ls"
           ls
           curl -H "Authorization: token ${GITHUB_TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Master/main/try_to_get_me.md
-          cat try_to_get_me.md
