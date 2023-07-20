@@ -27,4 +27,5 @@ jobs:
           gh api octocat
           echo "running ls"
           ls
+          gh repo clone https://github.com/spsdevops/DevOps_Master
           curl -H "Authorization: token ${GITHUB_TOKEN}" https://raw.githubusercontent.com/spsdevops/DevOps_Master/main/try_to_get_me.md
